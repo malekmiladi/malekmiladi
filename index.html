@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <meta name="author" content="Oskar Wickström" />
+    <meta name="dcterms.date" content="2024-08-26" />
+    <title>Malek Miladi</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <table class="header">
+        <tr>
+            <td colspan="2" rowspan="2" class="width-auto">
+                <h1 class="title">Malek Miladi</h1>
+                <span class="subtitle">Software Engineer</span>
+            </td>
+        </tr>
+    </table>
+
+    <p>Hi there,</p>
+    <p>I'm currently employed as a <span class="censored">hopefully a Software Engineer</span>
+        at <span class="censored">this could be your company</span>.
+    </p>
+    <p>I love building cool apps, learning new technologies, building solutions of what already
+        exists from scratch - with my own ideas, research, and take, or looking up how the big guys did it.</p>
+    <p>I am ambitious, and my passion is solving problems through innovative solutions.
+        For this, I aspire to build up my problem solving skills, master the craft of engineering
+        and become a go to expert. <br><br>
+        Unpopular opinion: C# is Microsoft's Java, Java is Oracle's C#...
+    </p>
+
+    <h2>Experience</h2>
+    <table>
+        <tr>
+            <td colspan="1" rowspan="1" class="width-50">
+                Software Engineer - Odeev, Tunisia
+            </td>
+            <td colspan="1" rowspan="1" class="width-50">
+                Dec 2023 - Jul 2024
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="1" class="width-auto">
+                <ul class="incremental">
+                    <li>Contributed to the development of 5 Identity Management Systems.
+                        4 of which fall under the United Nations Development Programme (UNDP)</li><br><br>
+                    <li>Developed 1 custom editor plugin for VS Code, which lets the user
+                        define frontend forms content. The output is consumed by
+                        a code gen software which generates the respective react components.
+                    </li><br><br>
+                    <li>
+                        Contributed to 1 VS Code plugins for defining Entity Relationship Diagram
+                        for representing a database structure. The output is consumed by
+                        a code gen software which generates backend components (ORM, DTO, DAO,
+                        generic workflows...) and frontend components (workflows, views, forms...)
+                    </li><br><br>
+                    <li>
+                        Contributed to code gen software for generating REST API Controllers
+                        with their respective routes, route methods, input and output types.
+                        CRUD models, ORM, DTOs DAOs, generic workflows.
+                    </li><br><br>
+                    <li>
+                        Contributed to the development and refactoring of deployment bash scripts for both
+                        dev and prod environments, as well as defining nginx config templates.
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" class="width-50">
+                Stack
+            </td>
+            <td colspan="1" rowspan="1" class="width-50">
+                Java - JavaScript - TypeScript - Spring Boot - FreeMarker - React - Bash - Linux - nginx
+            </td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+            <td colspan="1" rowspan="1" class="width-50">
+                DevOps Engineering Intern - STMicroelectronics, Tunisia
+            </td>
+            <td colspan="1" rowspan="1" class="width-50">
+                Feb 2023 - July 2023
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="1" class="width-auto">
+                <ul class="incremental">
+                    <li>Engineered a microservices platform to manage embedded devices test farms:<br>
+                        Made of a web client, a CLI client, a manager and a worker. <br><br>
+                        The web client displays embedded devices, their state (in use/free), and their
+                        respective information (name, model, tags, description, serial number, region...). <br><br>
+                        The CLI client allows devs to request a device/setup to run their tests. The request is
+                        placed in a queue. Once a device/setup is free, the client connects to the respective worker
+                        via a WebSocket, and transfers test files. <br><br>
+                        The manager takes in device/setup requests, places them in a queue. Everytime a device/setup is
+                        freed up,
+                        the manager picks the first request for said device/setup, and dispatches its information back
+                        to the client
+                        with the address of the respective worker. <br><br>
+                        The worker takes in client connections, test files, and device/setup information. Runs tests on
+                        the targets,
+                        all the while sending real time logs back to the user. When tests finish, it sends back the
+                        generated log files. <br><br>
+                        This tool enabled remote test execution, device/setup queueing and resource sharing across
+                        teams.<br><br>
+                    </li>
+                    <li>Integrated the tool in Jenkins jobs for STM32 devices automated testing,
+                        reducing validation test wait times by 20%
+                        and manual work by 40%.
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" class="width-50">
+                Keywords
+            </td>
+            <td colspan="2" rowspan="1" class="width-50">
+                DevOps, Docker, Jenkins, Linux, Bash, Flask, Python, VueJS, JavaScript, PostgreSQL
+            </td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+            <td colspan="1" rowspan="1" class="width-50">
+                DevOps Engineering Intern - STMicroelectronics, Tunisia
+            </td>
+            <td colspan="1" rowspan="1" class="width-50">
+                July 2022 - Sep 2022
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="1" class="width-auto">
+                Came up with a mechanism to give Docker access to devices without the need
+                of privileged mode and without the need to mount the /dev directory to the containers. <br> <br>
+                The workaround leverages Linux's main characteristic - everything is a file. <br> <br>
+                By using udev rules to detect hotplugs, and by catching target device's nodes
+                created under /dev, a script is triggered to collect the device's type,
+                minor number, major number and creating
+                an instance of the files in target containers, effectively creating a device passthrough. <br> <br>
+                <ul class="incremental">
+                    <li>Device type: Block device, character device etc...</li>
+                    <li>Minor number: Driver's index under the kernel.</li>
+                    <li>Majot number: Device's index under the kernel.</li>
+                </ul>
+
+                This solution opened the door to containerizing test farm environments, effectibely reducing
+                the times needed to prepare a new test farm from days, to a couple of minutes.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" class="width-50">
+                Keywords
+            </td>
+            <td colspan="2" rowspan="1" class="width-50">
+                DevOps, Docker, Linux, Bash
+            </td>
+        </tr>
+    </table>
+
+
+    <h2>Projects</h2>
+
+    <table>
+        <tr>
+            <td colspan="4" rowspan="1" class="width-auto">
+                On-Premise Cloud Implementation - <a href="https://github.com/malekmiladi?tab=repositories">github</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" class="width-min">
+                Description
+            </td>
+            <td colspan="1" rowspan="1" class="width-auto">
+                A microservices platform that allows users to provision Virtual Machines in a private cloud.<br><br>
+                The application is made of 4 microservices + the vm instance itself:<br><br>
+
+                <ul class="incremental">
+                    <li>vm-manager: <br>Manages user projects, takes in user's VM configuration and sends it to an
+                        orchestrator and a data source.<br>Maps VMs to their respective names, descriptions, projects,
+                        tags, users, regions, CPU counts, storage sizes and ram sizes.</li>
+                </ul>
+                <ul class="incremental">
+                    <li>vm-orchestrator: <br>Manages compute nodes.
+                        Takes in VM specs (only CPU count, RAM, storage size and region), a UUID and a
+                        token from <em>vm-manager</em>, finds a suitable compute node, and orders it to create and spin
+                        up the VM instance.</li>
+                </ul>
+                <ul class="incremental">
+                    <li>cloud-data-source: <br>Stores user's instance configuration. <br>Receives a UUID and a hashed
+                        input from the <em>vm-manager</em>, and stores it. Sends back a token.</li>
+                </ul>
+                <ul class="incremental">
+                    <li>compute-node: <br>Installed on machines with free resources. <br>Registers itself with the
+                        <em>vm-orchestrator</em>, and sends a heartbeat periodically. <br>
+                        Takes in VM specs (CPU counts, RAM, storage size) a UUID and a token.
+                        <br>Creates an XML description of the VM instance which is then handled by libvirt.<br>
+                        The XML config contains an encoded url to the <em>cloud-data-source</em> with the instance's
+                        predefined UUID and the token passed down by the <em>vm-orchestrator</em>.
+                    </li>
+                </ul>
+                <ul class="incremental">
+                    <li>vm-instance:<br>
+                        Once spun up, leverages the "cloud-init" method for fetching the user's configuration.<br>
+                        Ideally, the image used is a preinstalled distribution with an additional configuration to
+                        "cloud-init" where you implement how the mechanism would contact the <em>cloud data source</em>,
+                        how to authenticate, how to take in the data and pre-process it (decrypt, parse, etc...). <br>
+                        For simplicity, I opted in building a "dumb" implementation of this part (no hashing of data,
+                        no fancy auth method - auth uses a forever valid token for each instance).
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" class="width-min">
+                Architecture
+            </td>
+            <td colspan="1" rowspan="1" class="width-auto">
+                <figure>
+                    <pre>
+                        ┌───────────────┐
+                        │ message queue │
+                        │    (kafka)    │
+                        └───────┬───────┘
+                                │ topic1 ┌───────────────────┐ REST API
+                                │───────►│ cloud-data-source │◄────────┐
+┌────────┐  ┌────────────┐ msg1 │        └───────────────────┘         │
+│ client │─►│ vm-manager │─────►│                                      │
+└────────┘  └────────────┘ msg2 │ topic2  ┌─────────────────┐          │
+                                │────────►│ vm-orchestrator │          │
+                                │         └────────┬────────┘          │
+                                                   │                   │
+                                                   │ gRPC              │
+             db                                    │                   │
+       ┌────────────┐                              ▼                   ▼
+       │ postgreSQL │                       ┌──────────────┐    ┌─────────────┐
+       └─────┬──────┘                       │ compute-node │───►│ vm-instance │
+             │──────► vm-manage             └──────────────┘    └─────────────┘
+             │──────► vm-orchestrator
+            </pre>
+                </figure>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" class="width-min">
+                Stack
+            </td>
+            <td colspan="1" rowspan="1" class="width-auto">
+                Java - Python - TypeScript - Spring Boot - Flask - React - gRPC - Kafka - KVM - Libvirt - PostgreSQL -
+                Docker
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" class="width-min">
+                Demo
+            </td>
+            <td colspan="1" rowspan="1" class="width-auto">
+                COMING SOON™
+            </td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td colspan="4" rowspan="1" class="width-auto">
+                Sorting Algorithms Visualizer - <a
+                    href="https://github.com/malekmiladi/SortingAlgorithmsVisualizer">github</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" class="width-min">
+                Description
+            </td>
+            <td colspan="1" rowspan="1" class="width-auto">
+                An app made with Unity and C# to visualize sorting algorithms.<br>
+                The following sorting algorithms are implemented:<br>
+                <ul class="incremental">
+                    <li>Bubble Sort</li>
+                    <li>Insertion Sort</li>
+                    <li>Merge Sort</li>
+                    <li>Quick Sort</li>
+                    <li>Selection Sort</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" class="width-min">
+                Stack
+            </td>
+            <td colspan="1" rowspan="1" class="width-auto">
+                Unity - C#
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" class="width-min">
+                Demo
+            </td>
+            <td colspan="1" rowspan="1" class="width-auto">
+                <video controls="controls">
+                    <source src="https://github.com/user-attachments/assets/0550a7f2-c516-4a98-94ba-b5073ecb39fd"
+                        type="video/mp4">
+                </video>
+            </td>
+        </tr>
+    </table>
+    <br> FLASH BANG AHEAD! SORRY!<br><br><br>
+    <table>
+        <tr>
+            <td colspan="4" rowspan="1" class="width-auto">
+                Digit Classifier App - <a href="https://github.com/malekmiladi/digit-classifier-app">github</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" class="width-min">
+                Description
+            </td>
+            <td colspan="1" rowspan="1" class="width-auto">
+                An introductory project to Machine Learning. This project is made in 2 parts.<br><br>
+                The first is the implementation - from scratch - of a fully connected L-Layer ML model which uses
+                gradient descent as the optimization algorithm, a network of L ReLU activated hidden layers and
+                Softmax activation for the output layer.<br>As training data, the model is fed the MNIST
+                dataset.<br><br>
+                The second part, is a light weight web app where users can draw a digit, hit a button and their input
+                image
+                is sent to a web server. The image is then converted into grayscale, centered by calculating the
+                center of mass of pixels and padded/sliced to adhere to the MNIST dataset.<br>
+                The server then responds with the predicted digit.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" class="width-min">
+                Stack
+            </td>
+            <td colspan="1" rowspan="1" class="width-auto">
+                Python - numpy - Flask - HTML - CSS - JavaScript
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" class="width-min">
+                Demo
+            </td>
+            <td colspan="1" rowspan="1" class="width-auto">
+                <video controls="controls">
+                    <source src="https://github.com/user-attachments/assets/4eab39fe-67b0-4eb9-b68d-c62c566e6ad9"
+                        type="video/mp4">
+                </video>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+            <td colspan="4" rowspan="1" class="width-auto">
+                Sudoku Solver - <a href="https://github.com/malekmiladi/sudoku-solver">github</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" class="width-min">
+                Description
+            </td>
+            <td colspan="1" rowspan="1" class="width-auto">
+                A Sudoku game made with pygame. Implements backtracking algorithm to solve the puzzle
+                on <kbd><kbd>↵ Enter</kbd></kbd> key press.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" class="width-min">
+                Stack
+            </td>
+            <td colspan="1" rowspan="1" class="width-auto">
+                Python - Pygame
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" class="width-min">
+                Demo
+            </td>
+            <td colspan="1" rowspan="1" class="width-auto">
+                <video width="50" heigh="50" controls>
+                    <source src="https://github.com/user-attachments/assets/c1da5fee-8a9b-4dbb-b218-95f546730ec2"
+                        type="video/mp4">
+                </video>
+            </td>
+        </tr>
+    </table>
+    <br>
+
+    <table>
+        <tr>
+            <td colspan="4" rowspan="1" class="width-auto">
+                Pong! - <a href="https://github.com/malekmiladi/pong">github</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" class="width-min">
+                Description
+            </td>
+            <td colspan="1" rowspan="1" class="width-auto">
+                A simple Pong! game implementation in python and pygame.
+                Implements a dumb AI that mimics the ball's movement.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" class="width-min">
+                Stack
+            </td>
+            <td colspan="1" rowspan="1" class="width-auto">
+                Python - Pygame
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" class="width-min">
+                Demo
+            </td>
+            <td colspan="1" rowspan="1" class="width-auto">
+                <video width="50" heigh="50" controls>
+                    <source src="https://github.com/user-attachments/assets/9e1694ec-4060-43ea-8edd-f3dc0452f612"
+                        type="video/mp4">
+                </video>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+            <td colspan="4" rowspan="1" class="width-auto">
+                2D Game Engine Mechanics - <a
+                    href="https://github.com/malekmiladi/python-game-engine-mechanics">github</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" class="width-min">
+                Description
+            </td>
+            <td colspan="1" rowspan="1" class="width-auto">
+                An attempt to implement 2D engine game mechanics from scratch (physics and collisions). <br>
+                Currently, there's only a basic implementation of circular object collisions.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" class="width-min">
+                Stack
+            </td>
+            <td colspan="1" rowspan="1" class="width-auto">
+                Python - Pygame
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1" class="width-min">
+                Demo
+            </td>
+            <td colspan="1" rowspan="1" class="width-auto">
+                <video width="50" heigh="50" controls>
+                    <source src="https://github.com/user-attachments/assets/c68da891-88e0-4fc0-87ed-570392a4ccbd"
+                        type="video/mp4">
+                </video>
+            </td>
+        </tr>
+    </table>
+    <br>
+
+    <h2>Education</h2>
+
+    <ul class="tree">
+        <li>
+            <p style="margin: 0;">
+                <strong>Facutlty of Sciences of Tunis</strong>
+            </p>
+            <ul class="incremental">
+                <li>National Diploma of Engineering
+                    <ul class="incremental">
+                        <li>Electronics and Embedded Systems
+                            <ul class="incremental">
+                                <li>C/C++ Programming</li>
+                                <li>Data Structrues</li>
+                                <li>Basics of Machine Learning</li>
+                                <li>Basics of Networking</li>
+                                <li>Linux Operating System</li>
+                                <li>Automation</li>
+                                <li>Real-time systems</li>
+                                <li>Embedded Software Engineering</li>
+                                <li>Robotics</li>
+                                <li>Quantum Physics</li>
+                                <li>Probabilities and Statistics</li>
+                                <li>Robotics</li>
+                                <li>Bare-metal programming</li>
+                                <li>Digital Signal processing</li>
+                                <li>Signal processing</li>
+                                <li>CPU Design and Architecture</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Engineering Preparatory Cycle - Mathematics and Physics
+                    <ul class="incremental">
+                        <li>Intensive Mathematics Courses
+                            <ul class="incremental">
+                                <li>Algebra</li>
+                                <li>Analysis</li>
+                                <li>Probability and Statistics</li>
+                            </ul>
+                        <li>Intensive Physics Courses
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <hr>
+    <p>
+        Page template: <a href="https://github.com/owickstrom/the-monospace-web">the-monospace-web</a>
+    </p>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
